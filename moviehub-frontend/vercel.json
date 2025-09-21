@@ -11,6 +11,6 @@
     }
   ],
   "env": {
-    "VITE_API_URL": "https://moviehub-backend.onrender.com/api"
+    "VITE_API_URL": "https://moviehub-backend-95k3.onrender.com/api"
   }
 }

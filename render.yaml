@@ -16,7 +16,7 @@ services:
           name: moviehub-db
           property: connectionString
       - key: FRONTEND_URL
-        value: https://moviehub-frontend.vercel.app
+        value: https://atlas-alpha-six.vercel.app
 
 databases:
   - name: moviehub-db
