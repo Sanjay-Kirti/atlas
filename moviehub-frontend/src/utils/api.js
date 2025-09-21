@@ -2,6 +2,10 @@ import axios from 'axios'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
 
+// Debug logging
+console.log('🔗 API URL:', API_URL)
+console.log('🌍 Environment:', import.meta.env.MODE)
+
 // Create axios instance
 const api = axios.create({
   baseURL: API_URL,
@@ -28,6 +32,9 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => response,
   (error) => {
+    console.error('🚨 API Error:', error.message)
+    console.error('🔍 Error details:', error.response?.data || error)
+    
     if (error.response?.status === 401) {
       // Token expired or invalid
       localStorage.removeItem('token')
